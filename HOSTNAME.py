@@ -1,0 +1,1 @@
+HOSTNAME="Minor 2"

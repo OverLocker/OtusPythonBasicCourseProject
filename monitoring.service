@@ -1,0 +1,15 @@
+[Unit]
+Description=Facepay Python TG Monitoring
+After=network.target
+
+[Service]
+#User=your_username
+#Group=your_groupname
+WorkingDirectory=/var/lib/luna/scripts/monitoring
+Environment="PATH=/var/lib/luna/scripts/monitoring"
+ExecStart=/var/lib/luna/scripts/monitoring/venv/bin/python -u /var/lib/luna/scripts/monitoring/main.py
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
